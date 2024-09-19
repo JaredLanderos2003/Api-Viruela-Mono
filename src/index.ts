@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import caseRoutes from './routes/caseRoutes';
 import { setupSwagger } from './swagger'; // Importación de Swagger
+import { emailJob } from './cronjob';
 
 // Configuración de variables de entorno
 dotenv.config();
@@ -27,4 +28,8 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/monkeypox
 // Iniciar el servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  emailJob();
+
 });
+
+

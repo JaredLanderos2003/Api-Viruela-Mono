@@ -1,7 +1,7 @@
 // src/services/emailService.ts
 import nodemailer from 'nodemailer';
 
-const transporter = nodemailer.createTransport({
+export const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER, // Tu correo electrónico
@@ -15,7 +15,7 @@ export const sendEmail = async (to: string, subject: string, text: string) => {
       from: process.env.EMAIL_USER,
       to,
       subject,
-      text,
+      html:text
     });
     console.log('Correo enviado exitosamente');
   } catch (error) {
@@ -23,3 +23,4 @@ export const sendEmail = async (to: string, subject: string, text: string) => {
     throw error;
   }
 };
+

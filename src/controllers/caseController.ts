@@ -8,11 +8,7 @@ export const createCase = async (req: Request, res: Response) => {
     const newCase = new Case(req.body);
     await newCase.save();
     
-    // Enviar notificación por correo
-    const recipient = 'example@example.com'; // Reemplaza con el destinatario real
-    const subject = 'Nuevo caso creado'; // Asunto del correo
-    const text = `Se ha creado un nuevo caso con ID: ${newCase._id}`; // Mensaje del correo
-    await sendEmail(recipient, subject, text);
+   
 
     res.status(201).json(newCase);
   } catch (error) {
