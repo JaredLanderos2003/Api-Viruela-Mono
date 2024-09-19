@@ -1,34 +1,29 @@
-# .github/workflows/docker.yml
-name: Docker Build and Push
+name: Docker Build & Publish
 
 on:
   push:
     branches:
       - master
+      - main
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Clone code
+        uses: actions/checkout@v2
 
-    - name: Login 
-    run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_PASSWORD}}
+      - name: Login to Docker Hub
+        run: docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" -p "${{ secrets.DOCKERHUB_PASSWORD }}"
 
-    - name: build 
-    run: docker build -t noelanderos/api-monos:${{github.sha}} .
+      - name: Build Docker Image
+        run: docker build -t noelanderos/api-monos:${{ github.sha }} .
 
-    - name: tag 
-    run: docker tag noelanderos/api-monos:${{github.sha}} noelanderos/api-monos:latest
+      - name: Tag Latest
+        run: docker tag noelanderos/api-monos:${{ github.sha }} noelanderos/api-monos:latest
 
-    - name: push
-    run: |
-      docker push noelanderos/api-monos:${{github.sha}}
-      docker push noelanderos/api-monos:latest
-
-
-
-
-    
+      - name: Push Docker Image
+        run: |
+          docker push noelanderos/api-monos:${{ github.sha }}
+          docker push noelanderos/api-monos:latest
