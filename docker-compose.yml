@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+  app:
+    build: .
+    container_name: my-node-app-container
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGODB_URI=${MONGO_URL_DOCKER}
+      - EMAIL_USER=${EMAIL_USER}
+      - EMAIL_PASS=${EMAIL_PASS}

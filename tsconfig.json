@@ -1,0 +1,111 @@
+{
+  "compilerOptions": {
+    /* Projects */
+    // "incremental": true,
+    // "composite": true,
+    // "tsBuildInfoFile": "./.tsbuildinfo",
+    // "disableSourceOfProjectReferenceRedirect": true,
+    // "disableSolutionSearching": true,
+    // "disableReferencedProjectLoad": true,
+
+    /* Language and Environment */
+    "target": "ES6",                                     /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "jsx": "react",                                     /* Habilita soporte para JSX */
+    // "lib": [],
+    // "jsxFactory": "",
+    // "jsxFragmentFactory": "",
+    // "jsxImportSource": "",
+    // "reactNamespace": "",
+    // "noLib": true,
+    // "useDefineForClassFields": true,
+    // "moduleDetection": "auto",
+
+    /* Modules */
+    "module": "commonjs",                                /* Specify what module code is generated. */
+    // "rootDir": "./",
+    "moduleResolution": "node",                          /* Use Node.js module resolution strategy. */
+    // "baseUrl": "./",
+    // "paths": {},
+    // "rootDirs": [],
+    // "typeRoots": [],
+    // "types": [],
+    // "allowUmdGlobalAccess": true,
+    // "moduleSuffixes": [],
+    // "allowImportingTsExtensions": true,
+    // "resolvePackageJsonExports": true,
+    // "resolvePackageJsonImports": true,
+    // "customConditions": [],
+    // "noUncheckedSideEffectImports": true,
+    // "resolveJsonModule": true,
+    // "allowArbitraryExtensions": true,
+    // "noResolve": true,
+
+    /* JavaScript Support */
+    // "allowJs": true,
+    // "checkJs": true,
+    // "maxNodeModuleJsDepth": 1,
+
+    /* Emit */
+    // "declaration": true,
+    // "declarationMap": true,
+    // "emitDeclarationOnly": true,
+    // "sourceMap": true,
+    // "inlineSourceMap": true,
+    // "noEmit": true,
+    // "outFile": "./",
+    // "outDir": "./",
+    // "removeComments": true,
+    // "importHelpers": true,
+    // "downlevelIteration": true,
+    // "sourceRoot": "",
+    // "mapRoot": "",
+    // "inlineSources": true,
+    // "emitBOM": true,
+    // "newLine": "crlf",
+    // "stripInternal": true,
+    // "noEmitHelpers": true,
+    // "noEmitOnError": true,
+    // "preserveConstEnums": true,
+    // "declarationDir": "./",
+
+    /* Interop Constraints */
+    // "isolatedModules": true,
+    // "verbatimModuleSyntax": true,
+    // "isolatedDeclarations": true,
+    // "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    // "preserveSymlinks": true,
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+
+    /* Type Checking */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    // "noImplicitAny": true,
+    // "strictNullChecks": true,
+    // "strictFunctionTypes": true,
+    // "strictBindCallApply": true,
+    // "strictPropertyInitialization": true,
+    // "strictBuiltinIteratorReturn": true,
+    // "noImplicitThis": true,
+    // "useUnknownInCatchVariables": true,
+    // "alwaysStrict": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "exactOptionalPropertyTypes": true,
+    // "noImplicitReturns": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noUncheckedIndexedAccess": true,
+    // "noImplicitOverride": true,
+    // "noPropertyAccessFromIndexSignature": true,
+    // "allowUnusedLabels": true,
+    // "allowUnreachableCode": true,
+
+    /* Completeness */
+    // "skipDefaultLibCheck": true,
+    "skipLibCheck": true,                              /* Skip type checking all .d.ts files. */
+    "rootDir": "./",
+    "outDir": "./dist"
+
+
+
+  }
+}
